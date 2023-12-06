@@ -38,16 +38,6 @@ export default function ChatComponent() {
                         })}
 
 
-                        {/*  
-                            Cooper Codes is a YouTuber
-
-                            He makes software content
-
-                            You should subscribe.
-
-                            ["Cooper Codes is a YouTuber", "", "He makes software content", "", "You should subscribe."]
-
-                        */}
                     </div>
                 )
             })}
