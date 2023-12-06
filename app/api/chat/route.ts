@@ -23,7 +23,7 @@ export async function POST(request: Request) {
 
     // createChatCompletion (get response from GPT-4)
     const response = await openai.createChatCompletion({
-        model: 'gpt-3.5',
+        model: "gpt-3.5-turbo-16k",
         stream: true,
         messages: [
             { role: "system", content: "You are a helpful assistant. You explain software concepts simply to intermediate programmers."},
