@@ -1,4 +1,3 @@
-// route.ts Route Handlers
 import { Configuration, OpenAIApi } from "openai-edge";
 import { OpenAIStream, StreamingTextResponse } from "ai";
 
@@ -14,14 +13,8 @@ const openai = new OpenAIApi(config);
 export async function POST(request: Request) {
     const { messages } = await request.json(); // { messages: [] }
 
-    // messages [{ user and he says "hello there" }]
     console.log(messages);
 
-    // GPT-4 system message
-    // system message tells GPT-4 how to act
-    // it should always be at the front of your array
-
-    // createChatCompletion (get response from GPT-4)
     const response = await openai.createChatCompletion({
         model: "gpt-3.5-turbo-16k",
         stream: true,
